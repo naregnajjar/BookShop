@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMA - كتب الجيولوجيا</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="sticky-top container">
+        <div class="container-fluid bg-dark py-2">
+            <div class="row align-items-center">
+                <!-- Mobile Menu Toggle -->
+                <div class="col-2 d-lg-none">
+                    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <img src="images/hamburger.png" alt="Menu" class="hamburger-icon">
+                    </button>
+                </div>
+                
+                <!-- Logo (moved to left on desktop, right on mobile) -->
+                <div class="col-md-2 col-8 text-center text-md-start order-md-1">
+                    <a href="#" class="navbar-brand">
+                        <img src="images/Logo.png" alt="ROMA Publication & Distribution" height="50" class="d-inline-block align-top">
+                    </a>
+                </div>
+                
+                <!-- Icons (Profile, Bookmark, Shopping Cart) -->
+                <div class="col-2 d-md-none text-end">
+                    <div class="header-icons">
+                        <a href="#" class="text-white"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="col-lg-10 col-md-10 order-md-2 d-none d-lg-block">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- Language Dropdown -->
+                        <div class="dropdown me-3">
+                            <button class="btn btn-dark dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe me-1"></i> EN
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                                <li><a class="dropdown-item active" href="#">العربية</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Français</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- User Icons -->
+                        <div class="header-icons me-3">
+                            <a href="#" class="text-white mx-2"><i class="fas fa-user"></i></a>
+                            <a href="#" class="text-white mx-2"><i class="fa-regular fa-bookmark"></i></a>
+                            <a href="#" class="text-white mx-2"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                        
+                        <!-- Search Bar -->
+                        <div class="search-container me-3">
+                            <div class="input-group">
+                                <span class="input-group-text search-accent"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="ابحث عن الكتب...">
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation Menu -->
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ms-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">الرئيسية</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">جميع الكتب</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">الطلبات الجديدة</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">المؤلفين</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">اتصل بنا</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                
+                <!-- Mobile/Tablet Navigation Collapse -->
+                <div class="col-12 order-md-3">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <!-- Search Bar for Mobile -->
+                        <div class="search-container my-3 d-lg-none">
+                            <div class="input-group">
+                                <span class="input-group-text search-accent"><i class="fas fa-search"></i></span>
+                                <input type="text" class="form-control" placeholder="ابحث عن الكتب...">
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile Icons -->
+                        <div class="header-icons d-flex justify-content-center my-3 d-lg-none">
+                            <a href="#" class="text-white mx-2"><i class="fas fa-user"></i></a>
+                            <a href="#" class="text-white mx-2"><i class="fa-regular fa-bookmark"></i></a>
+                            <a href="#" class="text-white mx-2"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                        
+                        <!-- Language for Mobile -->
+                        <div class="dropdown d-flex justify-content-center my-3 d-lg-none">
+                            <button class="btn btn-dark dropdown-toggle" type="button" id="mobileLanguageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-globe me-1"></i> AR
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="mobileLanguageDropdown">
+                                <li><a class="dropdown-item active" href="#">العربية</a></li>
+                                <li><a class="dropdown-item" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#">Français</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Mobile Navigation Menu -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">الرئيسية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">جميع الكتب</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">الطلبات الجديدة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">المؤلفين</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">اتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section container">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6">
+                    <div class="hero-content">
+                        <h1>بيع كتب الجيولوجيا هو خطوة رائعة للطلاب والباحثين وعشاق العلوم الطبيعية</h1>
+                        <p>نقدم لكم أفضل الكتب وأحدثها، بالإضافة إلى مجموعة متنوعة من الموضوعات المختلفة حول الأرض والصخور. تم اختيار الكتب بعناية من قبل خبراء في المجال لضمان جودتها وقيمتها العلمية. يمكنك التسوق على الإنترنت والاستمتاع بالخصومات المختلفة على الكتب المفضلة لديك، كما يمكنك أيضاً تقديم اقتراحاتك عن المواضيع التي تفضل أن نوفرها.</p>
+                        <button class="btn btn-primary btn-lg">سجل الآن</button>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6">
+                    <div class="hero-image">
+                        <img src="images/books/book1.png" alt="Geology Books" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection Section 1 -->
+    <section class="book-collection container">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center">
+                <a href="#" class="view-all">عرض جميع الكتب</a>
+                <h2>جميع الكتب</h2>
+            </div>
+            <div class="book-slider">
+                <div class="row book-carousel">
+                    <!-- Book Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>عنوان الكتاب</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$19.99</span>
+                                    <span class="original-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book2.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Geology of the World</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$22.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book3.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>مبادئ الجيولوجيا</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$29.99</span>
+                                    <span class="original-price">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Principles of Geology</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>3.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Collection Section -->
+    <section class="featured-collection">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="featured-image">
+                        <img src="images/book-collection.png" alt="Featured Collection" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <div class="featured-content">
+                        <h2>استكشف أعماق الأرض مع مجموعتنا الجديدة من كتب الجيولوجيا!</h2>
+                        <p>تقدم هذه المجموعة نظرة شاملة ومفصلة عن علم الجيولوجيا وتطوراته الحديثة. مناسبة للطلاب والباحثين والمهتمين بعلوم الأرض والصخور. تم اختيار الكتب بعناية من قبل خبراء في المجال لضمان جودتها وقيمتها العلمية.</p>
+                        <button class="btn btn-primary btn-lg"><i class="fas fa-book me-2"></i>سجل الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection Section 2 -->
+    <section class="book-collection">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center">
+                <a href="#" class="view-all">عرض جميع الكتب</a>
+                <h2>منتجات جديدة</h2>
+            </div>
+            <div class="book-slider">
+                <div class="row book-carousel">
+                    <!-- Book Cards (Same structure as previous section) -->
+                    <!-- Book Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book2.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>عنوان الكتاب</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$19.99</span>
+                                    <span class="original-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book3.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Geology of the World</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$22.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>مبادئ الجيولوجيا</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$29.99</span>
+                                    <span class="original-price">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book2.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Principles of Geology</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>3.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection Section 3 -->
+    <section class="book-collection">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center">
+                <a href="#" class="view-all">عرض جميع الكتب</a>
+                <h2>المختارات</h2>
+            </div>
+            <div class="book-slider">
+                <div class="row book-carousel">
+                    <!-- Book Cards (Same structure as previous section) -->
+                    <!-- Book Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book3.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>عنوان الكتاب</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$19.99</span>
+                                    <span class="original-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Geology of the World</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$22.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book2.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>مبادئ الجيولوجيا</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$29.99</span>
+                                    <span class="original-price">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book3.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Principles of Geology</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>3.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews/Testimonials Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="reviews-images">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="images/geology-dummies.png" alt="Geology Books" class="img-fluid mb-3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="reviews-content">
+                        <h2>مراجعات شاملة في مادة الجيولوجيا استعد للنجاح!</h2>
+                        <p>تم تصميم هذه المراجعات الشاملة خصيصاً للطلاب المقبلين على الاختبارات في مادة الجيولوجيا. تغطي جميع المفاهيم الأساسية والمتقدمة بأسلوب سهل وميسر. تحتوي على تمارين وأسئلة متنوعة مع حلولها النموذجية لمساعدتك على التحضير الجيد للاختبارات.</p>
+                        <button class="btn btn-primary btn-lg"><i class="fas fa-book-open me-2"></i>تصفح المراجعات</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Collection Section 4 -->
+    <section class="book-collection">
+        <div class="container">
+            <div class="section-header d-flex justify-content-between align-items-center">
+                <a href="#" class="view-all">عرض جميع الكتب</a>
+                <h2>التوصيات</h2>
+            </div>
+            <div class="book-slider">
+                <div class="row book-carousel">
+                    <!-- Book Cards (Same structure as previous section) -->
+                    <!-- Book Card 1 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>عنوان الكتاب</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>4.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$19.99</span>
+                                    <span class="original-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 2 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book2.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Geology of the World</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>4.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$22.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 3 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book3.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>مبادئ الجيولوجيا</h3>
+                                <p>اسم المؤلف</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>5.0</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$29.99</span>
+                                    <span class="original-price">$34.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Book Card 4 -->
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="book-card">
+                            <div class="book-image">
+                                <img src="images/books/book1.png" alt="Book Cover" class="img-fluid">
+                            </div>
+                            <div class="book-info">
+                                <h3>Principles of Geology</h3>
+                                <p>Author Name</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>3.5</span>
+                                </div>
+                                <div class="price">
+                                    <span class="current-price">$24.99</span>
+                                </div>
+                                <button class="btn btn-primary add-to-cart"><i class="fas fa-shopping-cart me-2"></i>أضف إلى السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-navigation">
+                    <button class="carousel-prev"><i class="fas fa-chevron-right"></i></button>
+                    <button class="carousel-next"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and Company Info -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-logo">
+                        <img src="images/Logo.png" alt="ROMA Publication & Distribution" height="60" class="mb-3">
+                        <p>متجر متخصص في بيع كتب الجيولوجيا والعلوم الطبيعية للطلاب والباحثين والمهتمين.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>الموقع</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">جميع الكتب</a></li>
+                        <li><a href="#">المؤلفين</a></li>
+                        <li><a href="#">المراجعات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Customer Service -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>خدمة العملاء</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">الشحن والتوصيل</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h4>تواصل معنا</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 الشارع، المدينة، البلد</li>
+                        <li><i class="fas fa-envelope"></i> info@example.com</li>
+                        <li><i class="fas fa-phone"></i> +1-123-456-7890</li>
+                    </ul>
+                    <div class="newsletter">
+                        <h5>اشترك في النشرة الإخبارية</h5>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="البريد الإلكتروني">
+                            <button class="btn btn-primary">اشترك</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr>
+            
+            <!-- Payment Methods and Copyright -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="payment-methods">
+                        <img src="images/payment-methods.png" alt="Payment Methods" class="img-fluid payment-icons">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="copyright">
+                        <p>© 2025 جميع الحقوق محفوظة لـ ROMA للنشر والتوزيع</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
